@@ -19,6 +19,7 @@ function App() {
     };
     fetchCommits();
   }, []);
+  
   return (
     <>  
     <h1>{message?message:"Hello World"}</h1>
