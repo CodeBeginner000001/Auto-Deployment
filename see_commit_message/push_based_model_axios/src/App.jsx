@@ -15,6 +15,7 @@ const App = () => {
     setMessages(fetchData)}
     fetch();
    }, []);
+   
   return (
     <>
       <div>
