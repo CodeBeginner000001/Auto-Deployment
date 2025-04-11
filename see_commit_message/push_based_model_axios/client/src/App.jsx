@@ -8,7 +8,6 @@ const App = () => {
    it will send us a request once that event occure.
    */
    const [messages, setMessages] = useState([]);
-
    useEffect(() => {
   const fetch = async()=>{
     const fetchData = await axios.get(import.meta.env.VITE_SERVER_LINK)
