@@ -1,0 +1,13 @@
+version: "3.8" # version of the compose
+
+services:
+  postgres: 
+     image: postgres # using from docker hub or local image
+     ports: # define ports to map
+      - "5432:5432"
+  customImage:
+     image: vj
+     ports:
+       - "3000:4000"
+     environment:  # define your application envs
+        PORT: 4000

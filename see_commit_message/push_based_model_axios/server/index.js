@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = 4000 || 3000;
+const PORT = process.env.PORT|| 4000 ;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 let latestCommits = []; // this will hold the latest commits
 
 // GitHub Webhook Endpoint
-app.post('/webhook', (req, res) => {
+app.post('/api/webhook', (req, res) => {
   const { commits } = req.body;
 
   if (commits && commits.length > 0) {
@@ -32,7 +32,7 @@ app.post('/webhook', (req, res) => {
 app.get('/', (req, res) => {
   res.json(latestCommits);
 });
-app.get('/test',(req,res)=>{
+app.get('/api/test',(req,res)=>{
   res.send("heelooo");
 })
 
