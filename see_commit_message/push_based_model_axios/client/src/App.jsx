@@ -10,10 +10,17 @@ const App = () => {
    const [messages, setMessages] = useState([]);
    useEffect(() => {
   const fetch = async()=>{
-    const fetchData = await axios.get(import.meta.env.VITE_SERVER_LINK)
-    setMessages(fetchData)}
+    try {
+      const fetchData = await axios.get(import.meta.env.VITE_SERVER_LINK)
+      setMessages(fetchData)
+    } catch (error) {
+      console.log(error)
+      setMessages([]);
+    }
+  }
     fetch();
    }, []);
+   console.log(messages.data);
     /** HTML CODING */
     
   return (

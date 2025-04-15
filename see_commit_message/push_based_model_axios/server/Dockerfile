@@ -1,15 +1,7 @@
 # base image choosing the base image wisely can reduce the 
 # amount of code lines used and memory as well
-FROM ubuntu 
-
-# to run the command after the base image is set
-RUN apt update
-# -y should be put as it is a non-interactive platform -y indicates
-# that you are agree
-RUN apt install nodejs -y
-RUN node -v
-RUN apt install npm -y
-RUN npm -v
+ARG NODE_VERSION=23.7.0
+FROM node:${NODE_VERSION}-alpine
 
 # copy the required file from source to base image 
 # you can change the name of the source file in the base image
