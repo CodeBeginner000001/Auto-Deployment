@@ -1,4 +1,4 @@
-## 🚀 See-Commit-Push-Based-Axios**
+## 🚀 See-Commit-Push-Based-Axios
 
 **See-Commit-Push-Based-Axios** is a full-stack application that integrates with GitHub Webhooks to display recent commit messages on the frontend. Whenever a commit is pushed to the GitHub repository, the webhook triggers a backend endpoint which stores and serves the commit data. The frontend fetches and displays these commit messages using Axios.
 
