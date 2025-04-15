@@ -12,7 +12,7 @@ function App() {
    */
   useEffect(() => {
     const fetchCommits = async () => {
-        const res = await axios.get('https://api.github.com/repos/CodeBeginner000001/testing/commits');
+        const res = await axios.get(import.meta.env.VITE_SERVER_LINK);
         const commitmessage  = res.data.map(commit=> commit.commit.message);
         console.log(commitmessage);
         setMessage(commitmessage[0]);
