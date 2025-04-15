@@ -1,6 +1,6 @@
-## 🚀 See-Commit-Push-Based-Axios
+# 🚀 GitHub Commit Fetcher
 
-**See-Commit-Push-Based-Axios** is a full-stack application that integrates with GitHub Webhooks to display recent commit messages on the frontend. Whenever a commit is pushed to the GitHub repository, the webhook triggers a backend endpoint which stores and serves the commit data. The frontend fetches and displays these commit messages using Axios.
+**GitHub Commit Fetcher** is a full-stack application that integrates with GitHub Webhooks to display recent commit messages on the frontend. Whenever a commit is pushed to the GitHub repository, the webhook triggers a backend endpoint which stores and serves the commit data. The frontend fetches and displays these commit messages using Axios.
 
 This project includes:
 - A React + Vite frontend that shows the commit logs
